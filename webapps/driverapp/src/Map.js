@@ -1,0 +1,6 @@
+/*
+
+The Map component for the driver app. 
+This is used to show and track current location of the vehicle being driven
+
+*/
