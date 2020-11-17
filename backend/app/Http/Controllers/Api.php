@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 
 /**
  * Main API controller for Vehicle Booker. All driver apps interact with the backend via these APIs
-   API code is refactored into various modules
-
-   Author: Shreyak Chakraborty (C) 2020
+ * API code is refactored into various modules
+ *  Author: Shreyak Chakraborty (C) 2020
  */
 class Api extends Controller
 {
