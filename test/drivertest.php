@@ -78,14 +78,9 @@ $pageTitle  = "Vehicle Booker Driving Prototype";
    		var startpoint = [<?=$location[0]?>, <?=$location[1]?>];
    		
    		var mymap = L.map('mapid').setView(startpoint, zoomlevel);
-   		L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		    maxZoom: 18,
-		    id: 'mapbox/streets-v11',
-		    tileSize: 512,
-		    zoomOffset: -1,
-		    accessToken: 'pk.eyJ1Ijoic2hyZXlha2NoYWtyYWJvcnR5IiwiYSI6ImNrNzh0eGhyOTBpamszbW9nc2draG1tc2cifQ.XiK270MUulNgX-wPxBNoAw'
-		}).addTo(mymap);
+   		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(mymap);
 		
 		var startmarker = L.marker(startpoint).addTo(mymap);
         startmarker.bindPopup("<b>Start Point</b>");
