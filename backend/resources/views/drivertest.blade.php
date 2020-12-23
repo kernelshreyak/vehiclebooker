@@ -7,11 +7,6 @@
     Author: Shreyak Chakraborty (C) 2020
 */
 
-$googlekey = "AIzaSyBh1m5LWl-qV1nVkT1WZeWAzng5eP42RNk"; // API key for google Geocoding API
-
-
-$location = array(28.6828082,77.3121354);
-
 
 
 // view related

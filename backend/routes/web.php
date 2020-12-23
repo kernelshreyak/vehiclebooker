@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\VehiclesController;
+use App\Http\Controllers\Test;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,9 @@ Route::get('/vehicles/delete/{id}',[VehiclesController::class,'delete']);
 
 
 // Driver Routes
+Route::get('/drivertest',[Test::class,'drivertest']);
+
+
+Route::get('/admin', function () {
+    return view('admin/dashboard');
+});
