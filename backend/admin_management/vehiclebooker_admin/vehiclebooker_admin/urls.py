@@ -18,12 +18,13 @@ from django.urls import path,include
 
 from rest_framework import routers
 from managementadmin.serializers import *
-from managementadmin.views import DriverViewSet, VehicleViewSet
+from managementadmin.views import DriverViewSet, StorageLocationViewSet, VehicleViewSet
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'vehicles', VehicleViewSet)
 router.register(r'drivers', DriverViewSet)
+router.register(r'storagelocations', StorageLocationViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

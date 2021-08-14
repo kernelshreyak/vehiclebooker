@@ -16,3 +16,7 @@ class VehicleViewSet(viewsets.ModelViewSet):
 class DriverViewSet(viewsets.ModelViewSet):
     queryset = Driver.objects.all()
     serializer_class = DriverSerializer
+
+class StorageLocationViewSet(viewsets.ModelViewSet):
+    queryset = StorageLocation.objects.all()
+    serializer_class = StorageLocationSerializer

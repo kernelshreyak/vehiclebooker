@@ -8,7 +8,8 @@ const VehicleRouteSchema = mongoose.Schema({
 const VehicleLocationSchema = mongoose.Schema({
     vehicle_id:Number,
     lat:Number,
-    lng:Number
+    lng:Number,
+    timestamp: { type: Date, default: Date.now},
 });
 
 const VehicleRoute = mongoose.model('VehicleRoute',VehicleRouteSchema);

@@ -18,6 +18,9 @@ class Driver(models.Model):
     user = models.ForeignKey(to=User,null=False,on_delete=CASCADE)
     age = models.IntegerField(null=False)
 
+    def __str__(self) -> str:
+        return self.user.username
+
 
 # Main class defining a vehicle in the system. This can be booked by users and driven by drivers
 class Vehicle(models.Model):
@@ -31,10 +34,16 @@ class Vehicle(models.Model):
 
     name = models.CharField(max_length=200,null=False)
     vnum = models.CharField(null=False,max_length=100,unique=True)
+    vehicle_company = models.CharField(null=False,max_length=100,default="N/A")
     storagelocation = models.ForeignKey(to=StorageLocation,null=True,on_delete=SET_NULL)
     price = models.FloatField(default=0)
     type = models.IntegerField(choices=VehicleTypes.choices,default=VehicleTypes.CAR)
 
+    def __str__(self) -> str:
+        return self.name
+
+    def total_allotments():
+        return 2
 
 class VehicleAllotment(models.Model):
     driver = models.ForeignKey(to=Driver,null=False,on_delete=CASCADE)

@@ -16,3 +16,8 @@ class DriverSerializer(serializers.ModelSerializer):
     class Meta:
         model = Driver
         fields = ["driver_username","age"]
+
+class StorageLocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StorageLocation
+        fields = ['name','address_string','latitude','longitude']
